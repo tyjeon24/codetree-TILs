@@ -28,5 +28,5 @@ for i in range(n):
         toggle = "odd"
     else:
         print("* "*odd)
-        odd += 1
+        odd -= 1
         toggle = "even"
