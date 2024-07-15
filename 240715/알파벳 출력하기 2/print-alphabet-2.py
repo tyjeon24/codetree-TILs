@@ -9,4 +9,6 @@ for i in range(n):
         else:
             print(chr(number), end=" ")
             number += 1
+            if number == 91:
+                number = 65
     print()
