@@ -2,7 +2,7 @@ a = input()
 b = input()
 
 for count in range(len(a)):
-    if a[count:] + a[:count] == b:
+    if a[len(a)-count:] + a[:len(a)-count] == b:
         print(count)
         break
 else:
