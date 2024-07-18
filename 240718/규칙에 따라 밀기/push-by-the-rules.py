@@ -8,8 +8,10 @@ for command in order:
     else:
         start_index -= 1
 
-if start_index < 0:
+while start_index < 0:
     start_index += len(a)
+while start_index > len(a):
+    start_index -= len(a)
 for i in range(start_index, len(a)):
     print(a[i], end="")
 if start_index != 0:
