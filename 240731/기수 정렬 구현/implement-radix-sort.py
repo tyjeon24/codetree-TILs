@@ -6,7 +6,7 @@ def radix_sort(arr, k):
     for pos in range(k, -1, -1):
         arr_new = [[] for _ in range(10)]
         for i in range(0, len(arr)):
-            digit = arr[i] % (10 ** (k-pos+1))
+            digit = arr[i] % (10 ** (k-pos+1)) // (10 ** (k-pos))
             arr_new[digit].append(arr[i])
         
         store_arr = []
