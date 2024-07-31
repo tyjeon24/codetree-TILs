@@ -26,7 +26,8 @@ def merge(arr, low, mid, high):
             r+=1
         i+=1
 
-arr = [5,2,6,1,3,8]
-merge_sort(arr, 0, 5)
+input()
+arr = list(map(int, input().split()))
+merge_sort(arr, 0, len(arr)-1)
 for i in arr:
     print(i, end=" ")
