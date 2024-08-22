@@ -22,7 +22,7 @@ def get_season(month):
 
 last_day = {
     1:31,
-    2:30,
+    2:28,
     3:31,
     4:30,
     5:31,
@@ -37,7 +37,7 @@ last_day = {
 
 if is_leap_year(Y):
     last_day[2] = 29
-    
+
 if D <= last_day[M]:
     print(get_season(M))
 else:
