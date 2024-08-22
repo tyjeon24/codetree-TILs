@@ -1,6 +1,10 @@
 a, b = map(int, input().split())
 
-if a<b:
-    print(a+10, b*2)
-else:
-    print(b+10, a*2)
+def modify(a, b):
+    if a<b:
+        a, b = (a+10, b*2)
+    else:
+        a, b = (b+10, a*2)
+    return a, b
+a, b = modify(a, b)
+print(a, b)
