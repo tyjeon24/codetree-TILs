@@ -35,10 +35,10 @@ last_day = {
     12:31,
 }
 
-if is_leap_year(Y) and M==2 and D>29:
-    print(-1)
+if is_leap_year(Y):
+    last_day[2] = 29
+    
+if D <= last_day[M]:
+    print(get_season(M))
 else:
-    if D <= last_day[M]:
-        print(get_season(M))
-    else:
-        print(-1)
+    print(-1)
