@@ -9,7 +9,9 @@ def calculate(arr, lcm=None, index=1):
         if lcm % num == 0 and arr[index] % num == 0:
             lcm = int(lcm * arr[index] / num)
             break
+            
     if index == len(arr)-1:
-        return lcm
-    calculate(arr, lcm, index+1)
-print(calculate(arr))
+        print(lcm)
+    else:
+        calculate(arr, lcm, index+1)
+calculate(arr)
