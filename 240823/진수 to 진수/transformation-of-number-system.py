@@ -7,10 +7,11 @@ for i, num in enumerate(reversed(n)):
     decimal += int(num) * a ** i
 
 
-
+converted = []
 while True:
-    print(decimal%b, end="")
+    converted.insert(0, str(decimal%b))
     decimal//=b
     if decimal<b:
-        print(decimal)
+        converted.insert(0, str(decimal))
         break
+print("".join(converted))
