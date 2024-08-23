@@ -22,7 +22,6 @@ for _ in range(int(input())):
             else:
                 queue[idx] = "R"
                 idx+=1
-        print(queue)
             
 queue = list(queue)
 print(queue.count("L"), queue.count("R"))
