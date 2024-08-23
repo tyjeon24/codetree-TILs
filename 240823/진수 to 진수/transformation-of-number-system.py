@@ -14,4 +14,4 @@ while True:
     if decimal<b:
         converted.insert(0, str(decimal))
         break
-print("".join(converted))
+print(int("".join(converted)))
