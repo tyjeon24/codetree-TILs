@@ -1,5 +1,5 @@
 N, T = map(int, input().split())
-DELTAS = [[-1,0], [0,1], [1,0], [0,-1], ]
+DELTAS = [[-1,0], [0,1], [1,0], [0,-1]]
 i = 0
 
 commands = input()
@@ -18,8 +18,8 @@ for command in commands:
         i+=1
     else:
         i-=1
-    if i<0:
+    if i==-1:
         i=3
-    elif i>4:
+    elif i>=4:
         i=0
 print(result)
