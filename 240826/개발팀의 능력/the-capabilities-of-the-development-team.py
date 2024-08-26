@@ -3,7 +3,7 @@ result = 10000
 arr = list(map(int, input().split()))
 
 for i in range(5):
-    for j in range(i, 5):
+    for j in range(i+1, 5):
         for k in range(5):
             if k in [i, j]:
                 continue
