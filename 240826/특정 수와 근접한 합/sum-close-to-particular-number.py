@@ -1,13 +1,19 @@
-N, S = map(int, input().split())
-numbers = list(map(int, input().split()))
-total = sum(numbers)
-result = S
+import sys
 
-for i in range(N):
-    for j in range(i+1, N):
-        sub_total = total - numbers[i]- numbers[j]
-        
-        if abs(sub_total-S) < result:
-            result = abs(sub_total-S)
-    
-print(result)
+INT_MAX = sys. maxsize
+
+n, s = map(int, input().split())
+arr = list(map(int, input().split()))
+
+array_sum = 0
+ans = INT_MAX
+
+for elem in arr:
+    array_sum += elem
+
+for i in range(n):
+    for j in range(i+1, n):
+        new_sum = array_sum - arr[i] - arr[j]
+        diff = abs(new_sum - s)
+        ans = min(ans, diff)
+print(ans)
