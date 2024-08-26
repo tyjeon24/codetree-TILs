@@ -5,6 +5,8 @@ arr = list(map(int, input().split()))
 for i in range(5):
     for j in range(i, 5):
         for k in range(5):
+            if k in [i, j]:
+                continue
             first_team = arr[i] + arr[j]
             second_team = arr[k]
             remainder = [idx for idx in range(5) if idx not in [i,j,k]]
