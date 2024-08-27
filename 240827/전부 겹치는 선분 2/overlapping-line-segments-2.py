@@ -25,3 +25,4 @@ for skip in range(n):
         ans = "Yes"
     else:
         ans = "No"
+print(ans)
