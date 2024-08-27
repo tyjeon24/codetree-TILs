@@ -10,10 +10,11 @@ for _ in range(n):
     x1_list.append(x1)
     x2_list.append(x2)
 
-ans = "No"
+ans = False
 
 for skip in range(n):
     max_x1, min_x2 = 0, INT_MAX
+    possible = False
     for i in range(n):
         if i==skip:
             continue
@@ -22,7 +23,12 @@ for skip in range(n):
         min_x2 = min(min_x2, x2_list[i])
     
     if min_x2 >= max_x1:
-        ans = "Yes"
+        possible = True
     else:
-        ans = "No"
-print(ans)
+        possible = False
+    if possible:
+        ans = True
+if ans:
+    print("Yes")
+else:
+    print("No")
