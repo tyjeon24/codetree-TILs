@@ -1,5 +1,6 @@
 import sys
 
+INT_MAX = sys.maxsize
 n = int(input())
 
 x1_list, x2_list = [], []
