@@ -7,8 +7,11 @@ arr = list(map(int, input().split()))
 
 min_value, max_value = min(arr), max(arr)
 for target in range(min_value, max_value+1):
+    target_min, target_max = target, target+k
     temp = 0
     for num in arr:
-        temp += min(abs(min_value-num), abs(max_value-num))
+        if target_min <= num <= target_max:
+            continue
+        temp += min(abs(target_min-num), abs(target_max-num))
     result = min(result, temp)
 print(result)
