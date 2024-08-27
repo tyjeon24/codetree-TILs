@@ -11,8 +11,8 @@ for _ in range(n):
 lines.sort()
 
 union = lines[1]
-for i in range(2, n-1):
-    union = get_union(union, lines[i+1])
+for i in range(2, n-2):
+    union = get_union(union, lines[i])
     if union is None:
         print("No")
         break
