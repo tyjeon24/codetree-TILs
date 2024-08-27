@@ -14,7 +14,7 @@ for i in range(n-2):
     if low != -1 and low < right[0]: # 안 겹치면 break
         break
     # 두 선 중 더 작은 high 값이 모든 선의 교차점
-    low = min(left[1], right[1])
+    low = min(left[1], right[1], low)
 
 else:
     result = "Yes"
@@ -24,7 +24,7 @@ for i in range(1, n-1):
     if low != -1 and low < right[0]: # 안 겹치면 break
         break
     # 두 선 중 더 작은 high 값이 모든 선의 교차점
-    low = min(left[1], right[1])
+    low = min(left[1], right[1], low)
 
 else:
     result = "Yes"
