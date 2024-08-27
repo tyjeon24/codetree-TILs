@@ -24,4 +24,5 @@ for coupon_target in range(n):
         else:
             budget -= new_prices[i][0]
             presents += 1
+    result = max(result, presents)
 print(result)
