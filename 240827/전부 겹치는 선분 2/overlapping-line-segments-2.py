@@ -1,23 +1,26 @@
-def get_union(l, r):
-    if l[1] < r[0]:
-        return None
-    return (max(l[0], r[0]), min(l[1], r[1]))
+import sys
 
 n = int(input())
-lines = []
-for _ in range(n):
-    low, high = map(int, input().split())
-    lines.append((low, high))
-lines.sort()
 
-union = lines[1]
-for i in range(2, n-2):
-    union = get_union(union, lines[i])
-    if union is None:
-        print("No")
-        break
-else:
-    if get_union(lines[0], union) or get_union(union, lines[-1]):
-        print("Yes")
+x1_list, x2_list = [], []
+
+for _ in range(n):
+    x1, x2 = tuple(map(int, input().split()))
+    x1_list.append(x1)
+    x2_list.append(x2)
+
+ans = "No"
+
+for skip in range(n):
+    max_x1, min_x2 = 0, INT_MAX
+    for i in range(n):
+        if i==skip:
+            continue
+
+        max_x1 = max(max_x1, x1_list[i])
+        min_x2 = min(min_x2, x2_list[i])
+    
+    if min_x2 >= max_x1:
+        ans = "Yes"
     else:
-        print("No")
+        ans = "No"
