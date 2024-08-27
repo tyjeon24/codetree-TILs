@@ -1,4 +1,6 @@
-def get_union(l, r):
+def get_union(left, right):
+    l, r = (left[0], left[1]), (right[0], right[1])
+
     if l[1] < r[0]:
         return None
     return (max(l[0], r[0]), min(l[1], r[1]))
